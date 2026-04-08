@@ -1,37 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Checkout</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
 <h1>Checkout</h1>
+<div id="cart-items"></div>
+<p id="cart-total"></p>
 
-<form>
-
-<label>Name</label>
-<input type="text">
-
-<label>Email</label>
-<input type="email">
-
-<label>Address</label>
-<input type="text">
-
-<label>Card Number</label>
-<input type="text">
-
-<label>Expiry</label>
-<input type="text">
-
-<label>CVV</label>
-<input type="text">
-
-<button>Pay Now</button>
-
+<form id="checkout-form" onsubmit="checkout(event)">
+  <h3>Customer Info</h3>
+  <label>Name: <input type="text" id="customer-name" required></label><br>
+  <label>Email: <input type="email" id="customer-email" required></label><br>
+  <label>Address: <input type="text" id="customer-address" required></label><br>
+  <button type="submit">Place Order</button>
 </form>
 
-</body>
-</html>
+<script>
+displayCart();
+
+function checkout(event) {
+  event.preventDefault();
+  alert("Order placed! This is a test site. Payment will be added later.");
+  localStorage.removeItem('cart');
+  window.location.href = "index.html";
+}
+</script>
