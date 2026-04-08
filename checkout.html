@@ -1,22 +1,46 @@
-<h1>Checkout</h1>
-<div id="cart-items"></div>
-<p id="cart-total"></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Elegant Jewelry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="updateCartIcon()">
 
-<form id="checkout-form" onsubmit="checkout(event)">
-  <h3>Customer Info</h3>
-  <label>Name: <input type="text" id="customer-name" required></label><br>
-  <label>Email: <input type="email" id="customer-email" required></label><br>
-  <label>Address: <input type="text" id="customer-address" required></label><br>
-  <button type="submit">Place Order</button>
-</form>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="products.html">Products</a> |
+    <a href="checkout.html">Cart (<span id="cart-count">0</span>)</a>
+  </nav>
+  <hr>
 
-<script>
-displayCart();
+  <!-- Checkout content -->
+  <h1>Checkout</h1>
+  <div id="cart-items"></div>
+  <p id="cart-total"></p>
 
-function checkout(event) {
-  event.preventDefault();
-  alert("Order placed! This is a test site. Payment will be added later.");
-  localStorage.removeItem('cart');
-  window.location.href = "index.html";
-}
-</script>
+  <form id="checkout-form" onsubmit="checkout(event)">
+    <h3>Customer Info</h3>
+    <label>Name: <input type="text" id="customer-name" required></label><br>
+    <label>Email: <input type="email" id="customer-email" required></label><br>
+    <label>Address: <input type="text" id="customer-address" required></label><br>
+    <button type="submit">Place Order</button>
+  </form>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+  <script>
+    displayCart();
+
+    function checkout(event) {
+      event.preventDefault();
+      alert("Order placed! This is a test site. Payment will be added later.");
+      localStorage.removeItem('cart');
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>
