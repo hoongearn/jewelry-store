@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Elegant Jewelry</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Elegant Jewelry</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="checkout.html">Checkout</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>Timeless Jewelry Collection</h2>
+<p>Luxury pieces crafted for elegance.</p>
+
+<a href="products.html" class="button">Shop Now</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 Elegant Jewelry</p>
+
+<a href="terms.html">Terms</a>
+<a href="privacy.html">Privacy</a>
+<a href="refund.html">Refund Policy</a>
+
+</footer>
+
+</body>
+</html>
